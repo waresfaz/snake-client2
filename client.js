@@ -16,9 +16,9 @@ const connect = function() {
     // setTimeout(() => {
     //   conn.write("Move: up");
     // }, 500);
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 500);
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 100);
   });
 
   conn.on('data', (data) => { // receives data from server; if snake idles serves send string to client (me)
