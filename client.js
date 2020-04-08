@@ -8,6 +8,11 @@ const connect = function() {
 
   conn.setEncoding('utf8');
 
+  conn.on('connect', () => {
+    console.log('Successfully connected!');
+    conn.write("Name: WF")
+  });
+
   conn.on('data', (data) => { // receives data from server; if snake idles serves send string to client (me)
     console.log(data);        // "you ded cuz you idled"
   });
